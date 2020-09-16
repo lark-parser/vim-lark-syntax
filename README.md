@@ -17,7 +17,7 @@ cd your_vim_plugin_path; git clone https://github.com/lark-parser/vim-lark-synta
 
 ### Plugin manager
 
-Probably something like 
+Probably add to your .vimrc something like 
 
 ```
 MANAGER_NAME 'lark-parser/vim-lark-syntax'
