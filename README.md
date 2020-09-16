@@ -3,6 +3,8 @@
 Plugin to add syntax highlighting to grammar files of the python 
 package lark-parser.
 
+Files must have extension **.lark**
+
 ![screenshot](https://github.com/omega16/vim-lark-syntax/blob/master/example.png)
 
 ## Installation
@@ -28,7 +30,7 @@ MANAGER_NAME 'lark-parser/vim-lark-syntax'
 
 - [ ] Correct regex patterns highlight
  + [ ] Disable highlight of **()[]{}** if they 
-  are preceded by odd number of '\'.
+  are preceded by odd number of **\\**.
  + [ ] Highlight **\***,**+**,**?** 
 - [ ] Highlight **,** inside templates 
 
