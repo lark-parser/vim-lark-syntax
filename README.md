@@ -29,8 +29,8 @@ MANAGER_NAME 'lark-parser/vim-lark-syntax'
 ## TODO
 
 - [ ] Correct regex patterns highlight
- + [ ] Disable highlight of **()[]{}** if they 
+    + [ ] Disable highlight of **()[]{}** if they 
   are preceded by odd number of **\\**.
- + [ ] Highlight **\***,**+**,**?** 
+    + [ ] Highlight **\***,**+**,**?** 
 - [ ] Highlight **,** inside templates 
 
