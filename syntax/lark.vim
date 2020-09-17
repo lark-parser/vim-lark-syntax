@@ -15,7 +15,9 @@ syn match inner_token "\(\l\|\u\|_\)\@<!\(\u\|_\)\+"
 syn match separators +|\|:\|\(->\)+
 syn match agroup     +"\|(\|)\|{\|}\|\[\|\]+
 syn region comment start="//" end="$" 
-syn match regex_symbols /\(\(\\\)\@<=\(\\\\\)*\)\@<!\(+\|(\|)\|{\|}\|\[\|\]\|+\|\*\|?\|\.\|\^\|\$\)/
+syn match template_symbols +\,+
+syn region template start="{" end="}" contains=template_symbols
+syn match regex_symbols /\(\(\\\)\@<=\(\\\\\)*\)\@<!\(+\|(\|)\|{\|}\|\[\|\]\|+\|\*\|?\|\.\|\^\|\$\||\)/
 "The pattern \(\\\)\@<!\(\\\\\)*\\/ match a odd count
 "of '\'  non preceded by '\'
 "syn region pattern matchgroup=pattern_agroup  start="/\(/\)\@!" end="/\|\n" skip="\(\\\)\@<!\(\\\\\)*\\/" contains=agroup
@@ -37,3 +39,5 @@ hi def link pattern_agroup Operator
 hi def link comment     Comment
 hi def link pattern			String 
 hi def link string      String
+hi def link template_symbols Operator
+hi def link template    Delimiter 
