@@ -9,7 +9,7 @@ endif
 
 syn match regex_symbols /\(\(\\\)\@<=\(\\\\\)*\)\@<!\(+\|(\|)\|{\|}\|\[\|\]\|+\|\*\|?\|\.\|\^\|\$\||\)/
 syn keyword pattern_agroup /
-syn match statement +^\s*%\(ignore\|import\|declare\)+
+syn match statement +^\s*%\(ignore\|import\|declare\|override\|extend\)+
 syn match rule			"^\s*\(!\?\)\([_?]\)\?\l\(\l\|[_0-9]\)*" 
 syn match token  "^\s*\(_\?\)\u\(_\|\u\|\d\)*"
 syn match inner_token "\(\l\|\u\|_\)\@<!\(_\?\)\u\(_\|\u\|\d\)\+"
