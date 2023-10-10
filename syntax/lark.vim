@@ -15,7 +15,6 @@ syn match token  "^\s*\(_\?\)\u\(_\|\u\|\d\)*"
 syn match inner_token "\(\l\|\u\|_\)\@<!\(_\?\)\u\(_\|\u\|\d\)\+"
 syn match separators +|\|:\|\(->\)+
 syn match agroup     +"\|(\|)\|{\|}\|\[\|\]+
-syn region comment start="//" end="$" 
 syn match template_symbols +\,+
 syn region template start="{" end="}" contains=template_symbols
 "The pattern \(\\\)\@<!\(\\\\\)*\\/ match a odd count
@@ -24,6 +23,10 @@ syn region template start="{" end="}" contains=template_symbols
 "syn region string matchgroup=agroup  start='"' end='"\|\n' skip='\(\\\)\@<!\(\\\\\)*\\"'
 syn region pattern matchgroup=pattern_agroup start="/" end="/" skip="\\." contains=regex_symbols
 syn region string matchgroup=agroup  start='"' end='"\|\n' skip='\\.'
+
+"Comment needs to be matched **after** REGEX Patterns otherwise comments are
+"highlighted as an empty regex pattern followed by tokens
+syn region comment start="//" end="$" 
 
 
 let b:current_syntax = "lark"
